@@ -6,7 +6,8 @@ import eigenpip
 EIGEN_PATH = None
 
 if EIGEN_PATH is None:
-    EIGEN_PATH = eigenpip.__eigen_dir__
+    EIGEN_VER = "-3.3.9"
+    EIGEN_PATH = eigenpip.get_include()+EIGEN_VER
 
 def package_files(directory):
     paths = []
