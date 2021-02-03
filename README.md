@@ -1,2 +1,2 @@
 # eigenpip
-Distribute recent version of the Eigen library for Python linking.
+Distribute a recent version of the [C++ Eigen library](http://eigen.tuxfamily.org/) for Python linking.
