@@ -3,11 +3,7 @@ import os
 import eigenpip
 
 # path to eigen library
-EIGEN_PATH = None
-
-if EIGEN_PATH is None:
-    EIGEN_VER = "-3.3.7"
-    EIGEN_PATH = eigenpip.get_include()+EIGEN_VER
+EIGEN_PATH = os.environ.get("EIGEN_PATH", None)
 
 def package_files(directory):
     paths = []
@@ -16,8 +12,11 @@ def package_files(directory):
             paths.append(os.path.join("..", path, filename))
     return paths
 
-extra_files = package_files(EIGEN_PATH)
+if EIGEN_PATH is None:
+    EIGEN_VER = "-3.3.7"
+    EIGEN_PATH = eigenpip.get_include()+EIGEN_VER
 
+extra_files = package_files(EIGEN_PATH)
 setup(
     name="eigenpip",
     version="0.1",
@@ -29,5 +28,5 @@ setup(
     package_dir={"eigenpip/eigen": EIGEN_PATH},
     package_data={
         "eigenpip/eigen": extra_files
-    },
+    },    
 )
