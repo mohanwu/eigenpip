@@ -1,4 +1,4 @@
-# eigenpip Recent Version of Eigen Library for Python
+# eigenpip: Recent Version of Eigen Library for Python
 
 *Mohan Wu, Martin Lysy*
 
