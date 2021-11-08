@@ -1,6 +1,10 @@
 from setuptools import setup, find_packages
 import os
 import eigenpip
+from pathlib import Path
+
+this_directory = Path(__file__).parent
+long_description = (this_directory / "README.md").read_text()
 
 # path to eigen library
 EIGEN_PATH = os.environ.get("EIGEN_PATH", None)
@@ -23,6 +27,7 @@ setup(
     author="Mohan Wu, Martin Lysy",
     author_email="mhwu@uwaterloo.ca",
     description="Eigen Library for Python Linking",
+    long_description= long_description,
     url="http://github.com/mohanwu/eigenpip",
     packages = ["eigenpip", "eigenpip/eigen"],
     package_dir={"eigenpip/eigen": EIGEN_PATH},
