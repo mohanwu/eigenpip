@@ -10,6 +10,12 @@
 
 ## Installation
 
+To instal from pypi:
+
+```bash
+pip install eigenpip
+```
+
 For a normal installation: 
 
 ```bash
@@ -29,7 +35,7 @@ EIGEN_PATH="/ABSOLUTE/PATH/TO/EIGEN/LIBRARY" pip install .
 On Windows Powershell:
 
 ```bash
-$env:EIGEN_PATH = "C:\Users\mohan\Documents\kalmantv"; pip install .
+$env:EIGEN_PATH = "/ABSOLUTE/PATH/TO/EIGEN/LIBRARY"; pip install .
 ```
 
 ## Usage
