@@ -28,6 +28,7 @@ setup(
     author_email="mhwu@uwaterloo.ca",
     description="Eigen Library for Python Linking",
     long_description= long_description,
+    long_description_content_type='text/markdown',
     url="http://github.com/mohanwu/eigenpip",
     packages = ["eigenpip", "eigenpip/eigen"],
     package_dir={"eigenpip/eigen": EIGEN_PATH},
